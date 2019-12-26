@@ -68,7 +68,8 @@ class RegistrationController extends Controller
 
         return $this->render([
             'availableAccounts' => ((int) getenv('REG_MAX_USERS') - $userCount)
-        ]);
+        ],
+        'registration/register-feed.xml.twig');
     }
 
     /**
